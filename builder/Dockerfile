@@ -28,8 +28,8 @@ RUN git lfs install
 
 # Install build dependencies
 RUN apt update && \
-	apt install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib gnupg gperf imagemagick protobuf-compiler python3-protobuf lib32readline-dev lib32z1-dev libdw-dev libelf-dev lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev glslang-tools python3-mako python-is-python3 python3-yaml openjdk-11-jdk python3-pip && \
-	pip3 install meson --no-cache-dir && \
+	apt install -y bc bison ninja-build build-essential ccache curl flex g++-multilib gcc-multilib gnupg gperf imagemagick protobuf-compiler python3-protobuf lib32readline-dev lib32z1-dev libdw-dev libelf-dev lz4 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev glslang-tools python3-mako python-is-python3 python3-yaml openjdk-11-jdk python3-pip && \
+	pip3 install meson==1.8.3 --no-cache-dir && \
 	rm -r /var/lib/apt/lists
 
 # Copy the entrypoint script
