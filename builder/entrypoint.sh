@@ -24,11 +24,11 @@ croot
 # Variables for build
 export AB_OTA_UPDATER=false
 
-# Setup build target
-breakfast virtio_x86_64
-
-# Start build
+# Build for arm64
+breakfast virtio_arm64only
 m espimage-install
 
-# Create ISO file
+# Build for x86_64
+breakfast virtio_x86_64
+m espimage-install
 m isoimage-install
